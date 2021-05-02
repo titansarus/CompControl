@@ -503,6 +503,97 @@ $$0.6 = \frac{1}{2 \pi R C} \Rightarrow R = 265.258 k\Omega$$
 \end{enumerate}
 \section*{سوال 40}
 
+
+\begin{latin}
+\begin{center}
+	
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,441); %set diagram left start at 0, and has height of 441
+	
+	%Shape: Parallelogram [id:dp04977048398541495] 
+	\draw   (256,16) -- (368,16) -- (320,56) -- (208,56) -- cycle ;
+	%Straight Lines [id:da8167788285496835] 
+	\draw    (278,60) -- (278,78) ;
+	\draw [shift={(278,80)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Shape: Parallelogram [id:dp6271857977384494] 
+	\draw   (244.8,80) -- (368,80) -- (315.2,120) -- (192,120) -- cycle ;
+	%Straight Lines [id:da7452195687955427] 
+	\draw    (272,120) -- (272,138) ;
+	\draw [shift={(272,140)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Shape: Rectangle [id:dp9546953047470292] 
+	\draw   (230,136) -- (320,136) -- (320,176) -- (230,176) -- cycle ;
+	%Straight Lines [id:da8119562657515047] 
+	\draw    (272,176) -- (272,194) ;
+	\draw [shift={(272,196)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Shape: Rectangle [id:dp06721231397338912] 
+	\draw   (230,192) -- (320,192) -- (320,232) -- (230,232) -- cycle ;
+	%Shape: Parallelogram [id:dp17602028086396815] 
+	\draw   (233.6,248) -- (368,248) -- (310.4,288) -- (176,288) -- cycle ;
+	%Straight Lines [id:da8933647637306346] 
+	\draw    (272,232) -- (272,250) ;
+	\draw [shift={(272,252)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+	% Text Node
+	\draw (288,36) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{64.96pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				X= Input PORT 302
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (277,100) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{64.96pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				Y= Input PORT 306
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (267.5,153) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{37.31pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				Z=X * Y \ \ \ \ 
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (275,212) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{52.51pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				Z=Z DIV 0100H
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (272,268) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{78.3pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				X= OUTPUT PORT 302
+			\end{flushright}
+			
+	\end{minipage}};
+	
+	
+\end{tikzpicture}
+
+\end{center}	
+	
+\end{latin}
+
+فلوچارت اصلی به این شکل می‌شود. می‌توان یکسری مرحله Initialization هم مانند مثال ۲۵ صفحه ۱۶۷ کتاب در نظر گرفت که این جا رسم نشده است.
+
+با فرض این که ADC ما دوقطیب $5$ ولتی باشد و DAC ما هم $10$ ولت تک قطبی بوده و هر دو $8$ بیتی باشند داریم:
+
+$$X:= (V1/5 + 1/2)2^8$$
+$$Y:= (V2/5 + 1/2)2^8$$
+$$Z:= (V1/5 + 1/2)(V2/5 + 1/2)2^{16}$$
+$$Z := Z/2^8 \Rightarrow Z:= (V1/5 + 1/2)(V2/5 + 1/2)2^{8}$$
+
+$$V_{out}:= 10(Z/2^8) = 10(V1/5 + 1/2)(V2/5 + 1/2)$$
+
+
+قطعا با فرض‌های متفاوت برای ADC و DAC های مورد استفاده، جواب متفاوتی بدست می‌آید و در این مورد سوال چیزی نگفته است.
+
 \section*{سوال 44}
 
  
