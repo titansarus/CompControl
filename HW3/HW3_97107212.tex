@@ -226,6 +226,144 @@ $$\Delta V = 10 \times 2^{-6} = 0.15625$$
 \end{enumerate}
 \section*{سوال 20}
 
+\begin{enumerate}[label = \harfi*)]
+	\item
+	
+	با توجه به بازه داده شده، بازه ولتاژی ما $10$ ولت است و تعداد حالت‌های موردنیاز ما
+	$N = \frac{v_{ref}}{\Delta V} = \frac{10}{0.01} = 1000$
+	و نزدیک‌ترین عدد توان دو به $1000$ عدد $1024$ یعنی $2^{10}$ است. پس DAC ما $10$ بیتی‌خواهد بود با ولتاژ رفرنس $10$ ولت.
+	
+	همچنین از آن جایی که باید در زمان $2.5$ میکروثانیه از $0$ تا $1024$ رفته و برگردد، زمان بین عوض شدن خروجی به صورت:
+	$\delta t = \frac{2.5 ms}{2048} = 1.221 \mu s$
+	خواهد بود.
+	
+	\item
+	
+	فلوچارت بدین صورت است (به همراه مقداردهی اولیه به $0$)
+	
+	
+	\begin{center}
+		\begin{latin}
+		
+	
+	
+
+
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,441); %set diagram left start at 0, and has height of 441
+	
+	%Shape: Rectangle [id:dp4147725948146923] 
+	\draw   (240,77) -- (330,77) -- (330,117) -- (240,117) -- cycle ;
+	%Shape: Parallelogram [id:dp04977048398541495] 
+	\draw   (255,130) -- (360,130) -- (315,170) -- (210,170) -- cycle ;
+	%Shape: Diamond [id:dp5840879521917679] 
+	\draw   (280,190) -- (330,216.5) -- (280,243) -- (230,216.5) -- cycle ;
+	%Shape: Rectangle [id:dp44372903004557074] 
+	\draw   (250,30) -- (310,30) -- (310,50) -- (250,50) -- cycle ;
+	%Shape: Rectangle [id:dp029227429627333157] 
+	\draw   (240,260) -- (330,260) -- (330,300) -- (240,300) -- cycle ;
+	%Shape: Diamond [id:dp30496314715428463] 
+	\draw   (280,378.43) -- (330,404.93) -- (280,431.43) -- (230,404.93) -- cycle ;
+	%Shape: Parallelogram [id:dp2246364722176788] 
+	\draw   (245,320) -- (350,320) -- (305,360) -- (200,360) -- cycle ;
+	%Straight Lines [id:da5961847309553934] 
+	\draw    (280,50) -- (280,78) ;
+	\draw [shift={(280,80)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da6541590619324789] 
+	\draw    (300,120) -- (300,128) ;
+	\draw [shift={(300,130)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da8167788285496835] 
+	\draw    (280,170) -- (280,188) ;
+	\draw [shift={(280,190)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da209615947034002] 
+	\draw    (280,243) -- (280,261) ;
+	\draw [shift={(280,263)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da5285728692950147] 
+	\draw    (280,300) -- (280,318) ;
+	\draw [shift={(280,320)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da26905711690800294] 
+	\draw    (280,358.43) -- (280,376.43) ;
+	\draw [shift={(280,378.43)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da8845729545705618] 
+	\draw    (330,216.5) -- (460,210) -- (460,70) -- (282,65.06) ;
+	\draw [shift={(280,65)}, rotate = 361.59000000000003] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da7553450088634288] 
+	\draw    (330,404.93) -- (450,400) -- (459.89,212) ;
+	\draw [shift={(460,210)}, rotate = 453.01] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da5489856021929083] 
+	\draw    (230,404.93) -- (130,400) -- (130,250) -- (278,250) ;
+	\draw [shift={(280,250)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+	% Text Node
+	\draw (280,40) node  [font=\footnotesize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{17.92pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				N=0
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (285,97) node  [font=\footnotesize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{35.38pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				N=N+1 \ \ 
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (285,150) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{56.28pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				Output N to DAC
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (280,216.5) node  [font=\footnotesize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{36.3pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				N==1023
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (285,280) node  [font=\footnotesize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{33.34pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				N=N-1 \ \ 
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (275,340) node  [font=\scriptsize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{56.28pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				Output N to DAC
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (280,404.93) node  [font=\footnotesize,xscale=0.75,yscale=0.75] [align=left] {\begin{minipage}[lt]{22.68pt}\setlength\topsep{0pt}
+			\begin{flushright}
+				N==0
+			\end{flushright}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (334,202) node [anchor=north west][inner sep=0.75pt]  [xscale=0.75,yscale=0.75] [align=left] {NO};
+	% Text Node
+	\draw (291,242) node [anchor=north west][inner sep=0.75pt]  [xscale=0.75,yscale=0.75] [align=left] {YES};
+	% Text Node
+	\draw (204,382) node [anchor=north west][inner sep=0.75pt]  [xscale=0.75,yscale=0.75] [align=left] {NO};
+	% Text Node
+	\draw (341,382) node [anchor=north west][inner sep=0.75pt]  [xscale=0.75,yscale=0.75] [align=left] {YES};
+	
+	
+\end{tikzpicture}
+			
+		\end{latin}
+	\end{center}
+	
+\end{enumerate}
+
 \section*{سوال 24}
 
 
