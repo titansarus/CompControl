@@ -200,6 +200,76 @@ $$V_{adc} = (4.99756) V_{D} - 0.0012 =(4.99756)(V_{D} - 0.00025) $$
 می شد که به دلیل کوچک بودن عرض از مبدا، از در نظر گرفتن آن صرف نظر شده است.
 \end{enumerate}
 
+\newpage
+\section*{سوال 9}
+
+مداری مطابق شکل زیر طراحی می کنیم:
+
+\begin{center}
+	\includegraphics[width = 0.5 \textwidth]{images/2.png}
+\end{center}
+
+$$R_{1} (R_4 + 1/(j \omega C_x) ) = R_2 (R_3 + 1/(j \omega C_3))$$
+
+در نتیجه:
+
+$$R_1 R_4 = R_2 R_3$$
+$$R_1/(\omega C_x) = R_2 / (\omega C_3)$$
+
+با توجه به اعداد داده شده در صورت سوال و همچنین مثال 4 کتاب، نقطه Null را برابر $C_x = 0.0032 \mu F$ در نظر گرفته و داریم:
+
+$$R_1 = R_3 = 1 k\Omega , C_3 = 0.02 \mu F , C_x = 0.0032 \mu F , \omega = 1 \times 2 \pi $$
+
+و از حل معادله بدست می آید:
+$$R_2 = 6250 \Omega $$
+
+حال برای رسم نمودار باید مقاومت کل را برحسب سطح اتیل الکل بدست آوریم. در مثال 4 کتاب $A=1.806 m^2$ بدست آمده بود و کل طول ظرف هم $5m$ بود. در نتیجه اگر $x$ متر اتیل الکل باشد $5-x$ متر هوا است. خازن ها هم موازی بوده و مقادیرشان جمع می شود. پس
+
+$$C_x = \epsilon_0 \times (1.806 / 0.005) \times (K_{ethyl} x + K_{air} \times 5 - K_{air} x) = 3197 (25x + 5) pF$$
+
+از طرف دیگر برای اختلاف ولتاژ بین دو سر پل داریم:
+
+$$\delta V = V (\frac{R_3 + 1/j \omega C_3}{R_3 + 1/j \omega C_3 + R_1} - \frac{R_4 + 1/j \omega C_x}{R_4 + 1/j \omega C_x  + R_2})$$
+
+با جایگذاری این موارد و فاکتور گیری از توان های مشترک در صورت و مخرج داریم:
+
+$$
+\Delta V = 5 \left[\frac{1-7.96 j}{2-7.96 j}-\frac{6.25-j \frac{498}{25 x+5}}{12.5-j \frac{498}{25 x+5}}\right]
+$$
+
+با رسم نمودارها به کمک \lr{Wolfram Mathematica} داریم:
+
+نمودار Magnitude برحسب V نسبت به Level برحسب متر:
+
+
+\begin{center}
+	\includegraphics[width = 1.0 \textwidth]{images/3.pdf}
+\end{center}
+
+نمودار فاز برحسب درجه نسبت به Level برحسب متر:
+
+\begin{center}
+	\includegraphics[width = 1.0 \textwidth]{images/4.pdf}
+\end{center}
+
+\newpage
+
+\section*{سوال 12}
+
+$$\Delta R = GF \times R \times (strain) = 2.06 \times 120 \times 10^{-6} = 2.472 \times 10^{-4}$$
+
+از فرمول فصل قبل داریم:
+
+$$\Delta R = \alpha_0 R \Delta T$$
+$$\Delta T = (2.472 \times 10^{-4}) \times (0.0034) \times 120 = 1 \times 10^{-4} \deg C$$
+
+از طرفی 
+$\delta T = P/P_D$
+و
+$P=I^2 R$
+پس
+$$I = \sqrt{(P_D \Delta T / R)} = \sqrt{(25 \times 10^{-3} \times 1 \times 10^{-4} \times 120)} = 300 \mu A$$
+
 
 
 \end{document}
